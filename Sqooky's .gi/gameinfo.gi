@@ -769,7 +769,7 @@ GameInfo
 
         // ================ Preferences ================
         // --- 0. IMPORTANT ---
-        // mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
+        mm_prefer_solo_only                   "true"  // If I understand what this command does, this command controls whether or not you are matched with other solo queue players. For me this dramatically improved the solo queue performance but I am not sure if that is placebo. [def: "false"]
         // citadel_in_world_item_panel_dpi        "0"    // This controls the quality of the text above soul pickups, so boxes, golden statues, and soul orbs. Higher values mean better quality, lower means worse. [def: "2"]
         citadel_camera_use_vmdl_flatten_vertical      "true"  // Setting this command to false should improve responsiveness of mouse input but makes Rem, Venator, AND ESPICIALLY RAT KING's cameras move downwards when aiming down scope. Not exactly a dealbreaker but might be undesirable for some.                                                                                                                                      [def: "true"]
         citadel_per_weapon_per_surface_impact_effects "false" // Reduces the visuals for bullet tracers. This will disable the radius of yamato right click. [def: "true"]
@@ -785,8 +785,8 @@ GameInfo
         steam_inputhandler_enabled                    "true"  // This disables controller support when set to false. Setting to false should improve performance if you're not on a steam deck, but some people are, and I don't want an influx of "why no work with controller"  [def: "true"]
 
         // --- Render Distance ---
-        r_farz       "7000" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
-        r_mapextents "7000" // Far clipping plane, this will make buildings pop in and out      [def: "16384"]
+        r_farz       "-1" // This controls the far clipping plane, ie building/player popin   [def: "-1"]
+        r_mapextents "16384" // Far clipping plane, this will make buildings pop in and out      [def: "16384"]
 
         // --- Enemy Health Bar Minor Tweaks ---
         // citadel_unit_status_delta_decay_delay   "0"   // The delay between doing damage and havin the yellow damage indicator appear [def: "0.5"]
@@ -800,7 +800,7 @@ GameInfo
 
         // --- 2. Field of View ---
         // r_aspectratio changes the zoom of the camera which in turn doesn't make the punch zoom in as jarring, but the command is not as intuitive to set precisely
-        r_aspectratio "2.5" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
+        // r_aspectratio "2.5" // 1.75=80fov | 2.15=90fov | 2.49=100fov (every .15 interval = 5 fov).
 
         // --- 3. HUD ---
         // panorama_render_target_cache_max_size        "134217728" // This should increase the panorama cache size by 4x, needs more testing                       [def: "31457280"]
@@ -809,14 +809,14 @@ GameInfo
         citadel_distance_mouse_move_for_minimap_drawing "1"     // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
         citadel_hideout_ball_show_juggle_count          "1"     // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx             "1"     // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
-        citadel_hud_objective_health_debug_show_midboss "false" // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
+        citadel_hud_objective_health_debug_show_midboss "true" // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
         citadel_hud_objective_health_enabled            "2"     // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
         citadel_minimap_trooper_size                    "2"     // The size of the white dots that are troopers on the minimap [def: "3"]
         citadel_show_minimap_reveal_indicators          "true"  // idk yet
         citadel_show_old_neutral_camp_icons             "false" // idk yet
         citadel_unit_status_old_update_rate             "15"    // How frequently health bars can update. Lowering it should improve performance    [def: "30"]
         citadel_unit_status_single_bar_mode             "false" // This makes the v2 halth bar be one bar as opposed to multiple, which I find more easily readable [def: "false"]
-        citadel_unit_status_stamina_low_pips            "7"     // below this threshold stamina is permanantly visble [def: "3"]
+        citadel_unit_status_stamina_low_pips            "3"     // below this threshold stamina is permanantly visble [def: "3"]
         minimap_trooper_update_rate_hz                  "2"     // How many times a second the icons for troopers are updated on the minimap [def: "5"]
         panorama_comp_layer_lru_lifetime                "4"     // This should keep panorama caches loaded for longer so the game can use them more frequently. [def: "1"]
         v8_maximum_heap_size_mb                         "1024"  // This should double the amount of cache used by the ingame hud, so less stutter! Yay!
@@ -846,7 +846,7 @@ GameInfo
         citadel_camera_height                   "0"
         citadel_camera_height_ceiling_distance  "0"
         citadel_camera_listening_offset         "-1"
-        citadel_camera_pitch_default            "0"
+        // citadel_camera_pitch_default            "0"
         citadel_camera_see_distance_max         "7000"
         citadel_shoot_forward_offset            "0"
         citadel_stuck_camera_trace_extra_length "0"
@@ -1035,7 +1035,7 @@ GameInfo
         csm_viewmodel_max_visible_dist                    "1"     //
         csm_viewmodel_nearz                               "512"   //
         debug_draw_enable                                 "false" //
-        default_fov                                       "0"     //
+        // default_fov                                       "0"     //
         engine_max_ticks_to_simulate                      "2"     // Max number of ticks to simulate per frame, after which simulation will start to slow down compared to real time. [def: "-1"]
         r_async_compute_fog                               "true"  // Just whether to asyncroniously render fog                        [def: "false"]
         r_citadel_depth_prepass_dynamic_objects           "false" // Should be not prepassing entities that move                      [def: "true"]
@@ -1056,7 +1056,7 @@ GameInfo
         r_skip_precache_validation_check                  "true"  // I believe this checks to see if things are properly cached in a debug context, which we shouldn't need   [def: "false"]
         r_strip_invisible_during_sceneobject_update       "1"     // idk ngl    [def: "false"]
         sparseshadowtree_leaf_precision_viewmodel         "0"     //            [def: "0.0005"]
-        viewmodel_fov                                     "0"     //            [def: "54"]
+        // viewmodel_fov                                     "0"     //            [def: "54"]
 
         // ================ Grass ================
         r_grass_end_fade   "0" // When to cull grass when far                                      [def: "300"]
