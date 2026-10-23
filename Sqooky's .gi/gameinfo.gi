@@ -809,7 +809,7 @@ GameInfo
         citadel_distance_mouse_move_for_minimap_drawing "1"     // this command makes drawing on the minimap more precise so you can actually doodle on it :D makes me happy [def: "15"]
         citadel_hideout_ball_show_juggle_count          "1"     // Shows a fun juggle count minigame for hideout ball.              [def: "0"]
         citadel_hideout_ball_show_juggle_fx             "1"     // Shows juggle visual FX for hideout ball minigame.                [def: "0"]
-        citadel_hud_objective_health_debug_show_midboss "true" // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
+        citadel_hud_objective_health_debug_show_midboss "false" // This makes midboss' health bar visible whenever it's able to be rendered. I like it, you might not [def: "false"]
         citadel_hud_objective_health_enabled            "2"     // 0=Off, 1=Shrines, 2=T1/T2, 3=Barracks.                           [def: "2"]
         citadel_minimap_trooper_size                    "2"     // The size of the white dots that are troopers on the minimap [def: "3"]
         citadel_show_minimap_reveal_indicators          "true"  // idk yet
